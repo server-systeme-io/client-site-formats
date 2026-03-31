@@ -1,0 +1,35 @@
+use animation, transion and hover effect in clasic look. in the $originalSite replace the alt text of image with relevent words and useing the product name also add the title tag in img also add the schema if what ever is necessary change the menu of the index file.
+
+generate $otherPages with $configuration matching with the theme of $originalSite. 
+
+$configuration=[
+    title.maxLength=60
+    description.maxLength=60
+    add relevent seo keywords
+    theme as $originalSite.
+    images use as used in the $originalSite 
+    make the content in simple words and educating
+    use relevent alt text and title attribute for images.
+    link all the pages internally and tightly in the menu, paragraphs where ever is the chance
+    include <script src="js/faq.js"></script> beforeend of </body>
+]
+
+$otherPages=[
+Privacy.html
+Terms.html
+Disclaimer.html
+sitemap.xml
+
+sightfresh-review.html
+sightfresh-ingredients.html
+sightfresh-side-effects.html
+sightfresh-vs-other-vision-supplements.html
+
+digital-eye-strain-causes.html
+sightfresh-vs-eyefortin.html
+sightfresh-vs-visiultra.html
+sightfresh-vs-ocuvital.html
+sightfresh-vs-icunow.html
+]
+
+$originalSite=``;

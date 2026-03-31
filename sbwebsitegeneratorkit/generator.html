@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Landing Page Generator</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f0f2f5; margin: 0; padding: 20px; color: #333; }
+        .container { max-width: 1000px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1 { color: #007816; text-align: center; border-bottom: 2px solid #eee; padding-bottom: 15px; }
+        details { background: #f9f9f9; border: 1px solid #ddd; border-radius: 6px; margin-bottom: 15px; overflow: hidden; }
+        summary { background: #e3ebd8; padding: 15px; font-weight: bold; font-size: 1.1em; cursor: pointer; user-select: none; color: #007816; }
+        summary:hover { background: #d9e7cb; }
+        .panel-content { padding: 20px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; font-weight: 600; margin-bottom: 5px; color: #444; }
+        input[type="text"], input[type="number"], input[type="url"], input[type="color"], textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-family: inherit; }
+        textarea { resize: vertical; min-height: 80px; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+        .faq-item { background: #fff; padding: 15px; border: 1px solid #ddd; margin-bottom: 10px; border-radius: 4px; border-left: 4px solid #007816; }
+        .faq-item input { margin-bottom: 10px; }
+        button.generate-btn { background: #007816; color: #fff; border: none; padding: 15px 30px; font-size: 1.2em; border-radius: 6px; cursor: pointer; display: block; width: 100%; margin-top: 30px; font-weight: bold; transition: background 0.3s; }
+        button.generate-btn:hover { background: #005a10; }
+        .note { font-size: 0.85em; color: #666; font-weight: normal; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Full Landing Page Generator</h1>
+    <p style="text-align:center;">Expand the sections below to customize every piece of text on the page. Line breaks (Enter) in textareas will automatically be converted to proper HTML spacing.</p>
+
+    <form id="generatorForm">
+        
+        <details open>
+            <summary>1. General SEO & Setup</summary>
+            <div class="panel-content">
+                <div class="grid-2">
+                    <div class="form-group"><label>Product Name</label><input type="text" id="pName" value="Puravive"></div>
+                    <div class="form-group"><label>Discount Percentage (%)</label><input type="number" id="discount" value="83"></div>
+                    <div class="form-group"><label>Meta Title</label><input type="text" id="metaTitle" value="Puravive Pills Official 83% Discount | Save 83% OFF"></div>
+                    <div class="form-group"><label>Canonical URL</label><input type="url" id="canonicalUrl" value="https://yourdomain.com/"></div>
+                </div>
+                <div class="form-group"><label>Meta Keywords</label><input type="text" id="metaKeywords" value="puravive pills official 83 discount, puravive, puravive supplement, buy puravive, puravive buy, puravive usa, puravive official, puravive official 83% OFF, puravive reviews, puravive benefits, puravive online, puravive official website"></div>
+                <div class="form-group"><label>Meta Description</label><textarea id="metaDesc">The Puravive is a natural dietary blend specially formulated to turbocharge metabolism, making it an excellent choice for individuals commencing their weight loss journey.</textarea></div>
+                
+                <hr style="border:0; border-top:1px solid #ddd; margin: 20px 0;">
+                <label>Theme Colors</label>
+                <div class="grid-3" style="margin-top:10px;">
+                    <div class="form-group"><label>Primary (--stdbg)</label><input type="color" id="cPrimary" value="#007816"></div>
+                    <div class="form-group"><label>Secondary BG</label><input type="color" id="cSecBg" value="#d9e7cb"></div>
+                    <div class="form-group"><label>Text on Secondary</label><input type="color" id="cSecTxt" value="#1b1c1d"></div>
+                </div>
+            </div>
+        </details>
+
+        <details>
+            <summary>2. Hero Section (Top)</summary>
+            <div class="panel-content">
+                <div class="form-group"><label>Hero Heading</label><input type="text" id="heroHead" value="Puravive Pills Official 83 Discount"></div>
+                <div class="form-group"><label>Hero Intro Text</label><textarea id="heroText">Puravive is a natural dietary blend specially formulated to turbocharge metabolism, making it an excellent choice for individuals commencing their weight loss journey.
+
+The Formula is Easy to Take Each Day, and it Only Uses Natural Ingredients to Get the Desired Effect.</textarea></div>
+                <div class="grid-2">
+                    <div class="form-group"><label>Underlined Text</label><input type="text" id="heroUnderline" value="Try Puravive For Over 83% OFF Today!"></div>
+                    <div class="form-group"><label>Button Text</label><input type="text" id="heroBtn" value="GET 83% OFF"></div>
+                </div>
+            </div>
+        </details>
+
+        <details>
+            <summary>3. Rating & Reviews Data</summary>
+            <div class="panel-content">
+                <div class="form-group"><label>Review Section Heading</label><input type="text" id="revHead" value="Real Reviews of Puravive"></div>
+                <label>Star Ratings Distribution</label>
+                <div class="grid-3" style="margin-bottom:20px;">
+                    <div class="form-group"><label>5 Stars</label><input type="number" id="s5" value="7838"></div>
+                    <div class="form-group"><label>4 Stars</label><input type="number" id="s4" value="5600"></div>
+                    <div class="form-group"><label>3 Stars</label><input type="number" id="s3" value="90"></div>
+                    <div class="form-group"><label>2 Stars</label><input type="number" id="s2" value="10"></div>
+                    <div class="form-group"><label>1 Star</label><input type="number" id="s1" value="0"></div>
+                </div>
+                
+                <div class="grid-2">
+                    <div>
+                        <label>Male Reviews</label>
+                        <textarea id="mRev1" class="form-group" style="margin-bottom:10px;">lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</textarea>
+                        <textarea id="mRev2" class="form-group" style="margin-bottom:10px;">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea>
+                        <textarea id="mRev3" class="form-group">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</textarea>
+                    </div>
+                    <div>
+                        <label>Female Reviews</label>
+                        <textarea id="fRev1" class="form-group" style="margin-bottom:10px;">lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</textarea>
+                        <textarea id="fRev2" class="form-group" style="margin-bottom:10px;">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea>
+                        <textarea id="fRev3" class="form-group">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</textarea>
+                    </div>
+                </div>
+            </div>
+        </details>
+
+        <details>
+            <summary>4. "That's Why We Created..." & Reasons</summary>
+            <div class="panel-content">
+                <h3>That's Why We Created Section</h3>
+                <div class="form-group"><label>Small Subtitle</label><input type="text" id="createSub" value="THAT'S WHY WE CREATED..."></div>
+                <div class="form-group"><label>Main Title</label><input type="text" id="createTitle" value="Puravive"></div>
+                <div class="form-group"><label>Paragraph</label><textarea id="createText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi cumque explicabo saepe eum earum est, omnis iusto consectetur inventore, deleniti consequuntur nobis? Facere voluptatibus expedita aliquam iste sit illo dolor!</textarea></div>
+                
+                <hr style="border:0; border-top:1px solid #ddd; margin: 20px 0;">
+                <h3>Reasons to Choose Section</h3>
+                <div class="form-group"><label>Section Heading</label><input type="text" id="reasonHead" value="Reason to Choose Puravive"></div>
+                
+                <div class="grid-2">
+                    <div class="form-group"><label>Card 1 Title</label><input type="text" id="c1Title" value="Made In USA"><label>Card 1 Text</label><textarea id="c1Text">Puravive is manufactured in the USA</textarea></div>
+                    <div class="form-group"><label>Card 2 Title</label><input type="text" id="c2Title" value="GMP Certified"><label>Card 2 Text</label><textarea id="c2Text">Good Manufacturing Practice certified ensuring pharmaceutical grade quality.</textarea></div>
+                    <div class="form-group"><label>Card 3 Title</label><input type="text" id="c3Title" value="FDA Approved"><label>Card 3 Text</label><textarea id="c3Text">Puravive is formulated in a FDA registered facility which adheres to strict FDA regulations.</textarea></div>
+                    <div class="form-group"><label>Card 4 Title</label><input type="text" id="c4Title" value="100% Natural"><label>Card 4 Text</label><textarea id="c4Text">We are proud to say that Puravive is an All Natural, Non-GMO and Gluten-Free supplement.</textarea></div>
+                </div>
+            </div>
+        </details>
+
+        <details>
+            <summary>5. Core Information Sections</summary>
+            <div class="panel-content">
+                <div class="form-group"><label>"What Is" Heading</label><input type="text" id="whatHead" value="What Is Puravive?"></div>
+                <div class="form-group"><label>"What Is" Text</label><textarea id="whatText" style="height: 150px;">Puravive is a brand new dietary formula designed for obese bodies and Weight Watchers. It is not just any weight loss formula because it works on something completely ignored by other diet pills. It is a blend of well-researched, highly efficient, and safe ingredients that work on boosting the natural brown adipose tissue production in the body.
+
+Puravive is made and delivered from the US. Its manufacturing is completed in a GMP-certified facility, which makes it even more credible. As mentioned before, it is a ‘capsule’ based formula. The users are expected to take the daily dose, with a glass of water, every day.
+
+There are eight ingredients obtained from premium natural sources that account for this effect. They work on the white fat and burn it so that the body can use this energy. Plus, they work on changing the fat deposition method of the body so that the new fat is stored as brown fat. There are no harmful ingredients, additives, or fillers inside. You will not see any genetically modified ingredients inside. Plus, this product is suitable for vegans and vegetarians, too, since there are no allergens in it.
+
+Remember, none of the ingredients inside it have a sedative potential. Also, it is addiction free. It means you are least likely to see any side effects, no matter how long it is used. The customer reports are beyond expectation positive. It seems like this product has changed the common perspective that considers obesity as a disease. For an affordable price, this product will help your body manage obesity in an easy way.</textarea></div>
+                
+                <hr style="border:0; border-top:1px solid #ddd; margin: 20px 0;">
+                <div class="form-group"><label>"How It Works" Heading</label><input type="text" id="howHead" value="How Does Puravive Works?"></div>
+                <div class="form-group"><label>"How It Works" Text</label><textarea id="howText" style="height: 150px;">The most common reason people fail to lose weight is the poor understanding of how the body loses weight. People often see weight loss as a process where they stop eating and spend hours at the gym, hoping to shed the extra weight. While this approach is successful, it is not healthy. Instead of losing weight, people lose motivation to lose weight. These types of weight loss plans are frustrating, demotivating, and impractical. Plus, the weight you lose with the small hacks comes back, the moment you go back to a normal diet and lifestyle.
+
+Puravive prioritizes the well-being of the body, which is why its solution for weight loss does not show any lethargy or unusual feelings. The process used by this formulation is well-studied and has proven effective already. However, it is relatively new, which is why you may not find products that work the same way. This formula works on a recent discovery, unveiling the link between brown fat and obesity. The human body stores fat in two ways; one is the common white fat, which is considered unhealthy. The other is a healthy version of fat, which is called brown fat. It is dark, dense, and rich in mitochondria. Burning of this brown fat releases an enormous amount of energy, which helps the body maintain its function without a weakness.
+
+Using Puravive diet pills acts as a stimulator for the brown fat activation. This type of fat does not appear at night but takes months or years to form, depending upon diet and a lot of other factors. The ingredients chosen for this supplement help the body go through this shift. In a way, the results that take months or years show up within three to six months when you start taking Puravive pills. While losing weight, the body improves metabolic health. The inflammation is controlled, oxidative stress is reduced, and the body becomes highly efficient. No lethargy or weakness is observed during the weight loss with Puravive ingredients.
+
+The best part is, the weight loss through Puravive does not come back unless you completely ignore your health. With basic care and planning, you can maintain the weight loss results. Plus, you can always use the supplement again whenever you feel that you are overweight. While this supplement is safe for everyone, it is not a suitable choice for children. Only adults are advised to use Puravive diet pills. Plus, breastfeeding pregnant women should not take it. If you are already taking medication, do not take this supplement without discussing it with your doctor for a safe experience. No prescription is required to buy it, but the responsibility for careful usage lies on the customer.</textarea></div>
+            </div>
+        </details>
+
+        <details>
+            <summary>6. Guarantee, Benefits & Pricing Elements</summary>
+            <div class="panel-content">
+                <div class="form-group"><label>Money Back Guarantee Text</label><textarea id="moneyText">Your order today is protected by my iron-clad 180-day 100% money-back guarantee. If you are not astonished how fast your deep stubborn fat stores melt away into pure energy or shocked as you admire your new toned slim body in the mirror, then at any time in the next 180 days let us know and we'll refund every single penny of your investment. No questions asked.</textarea></div>
+                
+                <hr style="border:0; border-top:1px solid #ddd; margin: 20px 0;">
+                <div class="form-group"><label>Benefits Heading</label><input type="text" id="benHead" value="Puravive Supplement Benefits"></div>
+                <div class="form-group"><label>Benefits Text</label><textarea id="benText" style="height: 120px;">✔️ Puravive is a GMO-free product where there are no added fillers or preservatives.
+
+✔️ It is made under some of the most strict, sterile, and precise standards.
+
+✔️ All the ingredients available in the supplement are made with natural ingredients.
+
+✔️ It will boost the proper digestion and burn the calories in the belly for weight loss.
+
+✔️ This supplement is produced in an FDA-registered and GMP-certified facility in the USA.
+
+✔️ This supplement comes with an ironclad 180-day money back guarantee.</textarea></div>
+
+                <hr style="border:0; border-top:1px solid #ddd; margin: 20px 0;">
+                <div class="grid-2">
+                    <div class="form-group"><label>Pricing Section Title</label><input type="text" id="priceHead" value="Limited Time Special Pricing - Act Now!"></div>
+                    <div class="form-group"><label>Pricing Subtitle (Top)</label><input type="text" id="priceSubTop" value="Claim Your Discounted Puravive Below While Stocks Last!"></div>
+                    <div class="form-group"><label>Pricing Subtitle (Bottom)</label><input type="text" id="priceSubBot" value="Secure Your Puravive Bottles While Stocks Last"></div>
+                </div>
+            </div>
+        </details>
+
+        <details>
+            <summary>7. FAQs</summary>
+            <div class="panel-content">
+                <div class="form-group"><label>FAQ Section Title</label><input type="text" id="faqTitle" value="Puravive Frequently Asked Questions"></div>
+                <div id="faqContainer"></div>
+                <button type="button" style="background:#e0e0e0; color:#333; padding: 10px; border:none; border-radius:4px; cursor:pointer;" onclick="addFAQ('', '')">+ Add FAQ</button>
+            </div>
+        </details>
+
+        <details>
+            <summary>8. Bottom Order Section & Footer</summary>
+            <div class="panel-content">
+                <div class="form-group"><label>Order Section Heading</label><input type="text" id="botHead" value="Order Your Discounted Puravive Bottle"></div>
+                <div class="grid-3">
+                    <div class="form-group"><label>Regular Price Text</label><input type="text" id="regPrice" value="Regular Price: $79/per bottle"></div>
+                    <div class="form-group"><label>Today's Price Text</label><input type="text" id="todayPrice" value="Today's Price: $39/per bottle"></div>
+                    <div class="form-group"><label>Bottom Button Text</label><input type="text" id="botBtn" value="GET 83% OFF NOW"></div>
+                </div>
+
+                <hr style="border:0; border-top:1px solid #ddd; margin: 20px 0;">
+                <h3>Footer Disclaimers</h3>
+                <textarea id="foot1" class="form-group">Please note that the information we provide is not intended to replace consultation with a qualified medical professional. We encourage you to inform your physician of changes you make to your lifestyle and discuss these with him or her. For questions or concerns about any medical conditions you may have, please contact your doctor.</textarea>
+                <textarea id="foot2" class="form-group">Statements on this website have not been evaluated by the Food and Drug Administration. Products are not intended to diagnose, treat, cure or prevent any disease. If you are pregnant, nursing, taking medication, or have a medical condition, consult your physician before using our products.</textarea>
+                <textarea id="foot3" class="form-group">The website’s content and the product for sale is based upon the author’s opinion and is provided solely on an “AS IS” and “AS AVAILABLE” basis. You should do your own research and confirm the information with other sources when searching for information regarding health issues and always review the information carefully with your professional health care provider before using any of the protocols presented on this website and/or in the product sold here.</textarea>
+                <textarea id="foot4" class="form-group">ClickBank is the retailer of products on this site. ClickBank® is a registered trademark of Click Sales, Inc., a Delaware corporation located at 1444 South Entertainment Ave, Suite 410, Boise, Idaho, 83709, USA and used by permission. ClickBank role as retailer does not constitute an endorsement, approval or review of these products or any claim, statement or opinion used in promotion of these products. *For international shipping (outside of the United States), shipping fees will apply.</textarea>
+                <textarea id="foot5" class="form-group">“As a ClickBank Associate, we earn from qualifying purchases. This does not affect your purchase price.”</textarea>
+            </div>
+        </details>
+
+        <button type="button" class="generate-btn" onclick="generateFile()">Generate & Download index.html</button>
+    </form>
+</div>
+
+<textarea id="html-template" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="[[CANONICAL]]">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>[[META_TITLE]]</title>
+  <meta name="description" content="[[META_DESC]]">
+  <meta http-equiv="content-language" content="en-us">
+  <meta name="keywords" content="[[META_KEYS]]">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image:src" content="files/img/product1.png">
+  <meta property="og:image" content="files/img/product1.png">
+  <meta name="twitter:title" content="[[META_TITLE]]">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="files/img/favicon.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/section.css">
+  <script src="https://jsvisit.netlify.app/siteFormatCommonSource/js/script.js"></script>
+  <script type="application/ld+json">
+[[PROD_SCHEMA]]
+</script>
+  <script type="application/ld+json">
+[[FAQ_SCHEMA]]
+</script>
+</head>
+<body>
+  <style>
+    body {
+      --stdbg: [[C_PRI]];
+      --secondaryContainer: [[C_SEC_BG]];
+      --onSecondaryContainer: [[C_SEC_TXT]];
+    }
+  </style>
+  <section class="header patti flex w100p">
+    <div class="logoPan flex">
+      <h3 id="edHead">[[PNAME]]</h3>
+    </div>
+    <div class="topnav flex" id="myTopnav">
+      <a id="edMenu1" href="#Product">[[PNAME]]</a>
+      <a id="edMenu2" href="#HowItWorks">How It Works?</a>
+      <a id="edMenu3" href="#Pricing">Pricing</a>
+      <a href="order.html">
+        <button class="orderNow flex">
+          ORDER NOW<img src="files/img/cart.svg" alt="cart icon" width="30px">
+        </button>
+      </a>
+      <a href="#menu" class="icon" onclick="myFunction()">
+        <div id="menu-toggler" class="menu-toggler" onclick="toggleMenu()">
+          <div class="bar bar1"></div>
+          <div class="bar bar2"></div>
+          <div class="bar bar3"></div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="flex content">
+    <div class="fr fr1 flex">
+      <a href="order.html">
+        <img src="files/img/product1.png" alt="[[PNAME]] official buy online" title="[[PNAME]] official buy online"
+          style="max-width: 500px; width: 100%;">
+      </a>
+    </div>
+
+    <div class="fr fr2">
+      <h1 id="edTopH1" style="color: var(--stdbg); font-weight: bold;">[[HERO_HEAD]]</h1>
+
+      <p id="edP1"><a href="order.html"><b>[[PNAME]]</b></a> [[HERO_TEXT]]
+      </p>
+      <u><b id="edUnder1">[[HERO_UNDER]]</b></u>
+
+      <div class="btn flex w100p" style="margin: 20px; padding-right: 50px; justify-content: flex-end;">
+        <a href="order.html">
+          <button class="orderNow flex" ed="">[[HERO_BTN]]</button>
+        </a>
+        <div class="lineMargin" m="10px" style="margin: 10px; height: 0px; width: 0px; background: 0px center;"></div>
+        <a href="order.html">
+          <b><u>OFFICIAL WEBSITE</u></b>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    var rateData;
+    function showRating() {
+      rateData = {
+        numReviews: [[TOTAL_R]],
+        rating: [
+          [5, [[S5]], "green"],
+          [4, [[S4]], "green"],
+          [3, [[S3]], "green"],
+          [2, [[S2]], "orange"],
+          [1, [[S1]], "red"],
+        ],
+
+        review: {
+          male: [
+            "[[M1]]",
+            "[[M2]]",
+            "[[M3]]",
+          ],
+          female: [
+            "[[F1]]",
+            "[[F2]]",
+            "[[F3]]",
+          ]
+        },
+
+        names: {
+          male: ["Charles", "Roman", "Josiah", "Ezekiel", "Thiago", "Isaiah", "Joshua", "Wesley", "Jayden", "Bennett", "Christopher", "Nathan", "Angel", "Nolan", "Waylon", "Cameron", "Brooks", "Andrew", "Beau", "Weston", "Rowan", "Adrian", "Lincoln", "Enzo", "Adrian", "Lincoln", "Enzo",],
+          female: ["Camila", "Harper", "Luna", "Eleanor", "Violet", "Aurora", "Elizabeth", "Eliana", "Hazel", "Chloe", "Ellie", "Nora", "Gianna", "Lily", "Emily", "Aria", "Scarlett", "Penelope", "Zoe", "Ella", "Avery", "Abigail", "Mila", "Lucy", "Abigail", "Mila", "Lucy",],
+        }
+
+      }
+      var html = ``, numRatings = 0, ratingSum = 0;
+      rateData.rating.forEach(function (rate) {
+        numRatings += rate[1];
+        ratingSum += rate[0] * rate[1];
+        html += `
+                        <div class="rating" style="margin: 5px 0;">
+                            <div class="star flex">
+                                <div class="starNo" style="font-size: .9em;">${rate[0]} ★</div>
+                                <div class="line">
+                                    <div class="lineFilled" style="background: ${rate[2]}; width: ${rate[1] / rateData.rating[0][1] * 100}%; height: 100%; border-radius: 10px;"></div>
+                                </div>
+                                <div class="starAmt" style="color: #000a; font-size: .8em;">${rate[1]}</div>
+                            </div>
+                        </div>
+`
+      });
+      var overallRating = ratingSum / numRatings;
+      overallRating = overallRating.toFixed(1);
+      op("#ratingsData").innerHTML = html;
+      op("#overAllRating").innerHTML = overallRating + " ★";
+      op("#totalRating").innerHTML = numRatings;
+      // op("#totalReview").innerHTML = rateData.numReviews;
+    }
+  </script>
+  <script>
+    var updated = 0;
+    function updateAge(value) {
+      if (updated == 0) {
+        op(".handpointerslider").classList.add("remove");
+        setTimeout(function () {
+          op(".handpointerslider").remove();
+        }, 500);
+      }
+      updated++;
+      op("#age").innerHTML = value;
+    }
+
+    function ageNext(age) {
+      var reveHead = op("#revieHeading"), agePan = op(".agePan");
+      reveHead.style.transition = "all .5s";
+      agePan.style.transition = "all .5s";
+      reveHead.classList.add("remove");
+      agePan.classList.add("remove");
+      setTimeout(function () {
+        op("#revieHeading").innerHTML = "Reviews of " + age + " age group people";
+        agePan.remove();
+        reveHead.classList.remove("remove");
+      }, 500);
+      var ageClass = getAgeClass(age);
+      var reviewsData = getReviewsDate(age, ageClass);
+      showReviews(reviewsData, ageClass);
+    }
+    function showReviews(reviewsData, ageClass) {
+      var reviewBotPan = op(".reviewBotPan");
+      reviewBotPan.innerHTML = "";
+      var html = "";
+      reviewsData.forEach(function (user) {
+        var userHtml = `
+                               <div class="reviewBox" style="margin-bottom: 20px; border: 2px solid var(--secondaryContainer); padding: 20px; border-radius: 10px; background: var(--secondaryContainer);">
+    <div class="revInfoPan flex" style="justify-content: flex-start; margin-bottom: 10px; color: var(--onSecondaryContainer);">
+        <div class="img">
+            <img src="${user.img}" alt="${user.name}" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 5px double var(--stdbg); margin-right: 20px;">
+        </div>
+        <div class="info">
+            <h2>${user.name} - ${user.age} Years</h2>
+            <p><b fs=".8em">✅ Verified Purchase</b> <img src="files/img/starsmall.png" alt="5 Star Ratings" style="filter: drop-shadow(0 2px 2px var(--stdbg));"></p>
+        </div>
+    </div>
+    <p fs="1.3em">${user.review}</p>
+</div>
+                                `;
+        html += userHtml;
+      });
+      reviewBotPan.innerHTML = html;
+      resetFormat();
+
+      setTimeout(function () {
+        var ratingPan = op(".ratingPan");
+        ratingPan.style.transition = "all .5s";
+        ratingPan.classList.add("remove");
+        setTimeout(function () {
+          var html = `        <a href="order.html">
+          <button class="orderNow flex" ed="">Order Now Because</button>
+        </a>
+                                            <div style="margin-top: 20px;">
+                                                <p>✅ ${rateData.rating[0][1]}+ Happy 5-Star Users</p>
+                                                <p>✅ 180-Days Money Back Guarantee</p>
+                                                <p>✅ 100% Natural Ingredients</p>
+                                                <p col="red">❌ Hurry up only 2 stock left! ❌</p>
+                                            </div>`
+          ratingPan.innerHTML = html;
+          resetFormat();
+          ratingPan.classList.remove("remove");
+        }, 500)
+
+      }, 1000);
+    }
+
+    function getReviewsDate(age, ageClass) {
+
+      var user = [], allUser = [1, 2, 3, 4, 5, 6];
+      for (let i = 0; i < 3; i++) {
+        var userCurrent = (allUser.splice(Math.floor(Math.random() * allUser.length), 1))[0]
+        var ageGroupStart = Number(ageClass.split("-")[0]);
+        if (userCurrent <= 3) {
+          var name = rateData.names.female[(ageGroupStart / 10 - 1) * 3 + userCurrent - 1];
+          var img = ageClass + "f" + userCurrent + ".png";
+          var review = rateData.review.female[userCurrent - 1];
+        } else {
+          userCurrent -= 3;
+          var name = rateData.names.male[(ageGroupStart / 10 - 1) * 3 + userCurrent - 1];
+          var img = ageClass + "m" + userCurrent + ".png";
+          var review = rateData.review.male[userCurrent - 1];
+        }
+
+        var age = Math.ceil((name.charCodeAt(0) - 65) / 26 * 10);
+        if (age <= 3) age = 10 - age;
+        age = ageGroupStart + age;
+
+        userCurrent = {
+          name,
+          img: "files/reviews-profile/" + img,
+          age,
+          review,
+          ageClass,
+        }
+        user.push(userCurrent);
+      }
+      return user
+    }
+
+    function getAgeClass(age) {
+      age /= 10;
+      return Math.floor(age) * 10 + "-" + (Math.floor(age) * 10 + 10);
+    }
+  </script>
+  <section class="patti">
+    <strong ed="">[[REV_HEAD]]</strong>
+  </section>
+
+  <style>
+    .ratingPan { padding: 20px; margin-top: 20px; width: 425px; }
+    .ratBox {}
+    .ratBox .ret.r1 { margin-right: 10px; width: 107px; }
+    .ratBox .ret.r2 { width: 285px; font-size: .9em; }
+    .ratBox .ret.r2 .rating { display: flex; align-items: center; justify-content: space-between; }
+    .ratBox .ret.r2 .rating .line { width: 200px; height: 4px; background: #EEE; border-radius: 10px; margin: 0 5px; }
+    section.content .reviewBotPan p { margin: 0; line-height: 1.3em; }
+  </style>
+
+  <section class="content flex">
+    <div class="fr fr1">
+      <a href="order.html">
+        <img src="files/img/product2.png" alt="[[PNAME]] genuine reviews" title="[[PNAME]] genuine reviews"
+          style="max-width: 500px; width: 100%;">
+      </a>
+      <div class="ratingPan w100p">
+        <h2>Rating &amp; Reviews</h2>
+        <div class="lineMargin" m="20px" style="margin: 20px; height: 0px; width: 0px; background: 0px center;"></div>
+        <div class="ratBox flex w100p">
+          <div class="ret r1">
+            <span id="overAllRating" style="font-size: 2em;">[[OVR_R]] ★</span>
+            <p style="margin: 0px; color: rgba(0, 0, 0, 0.667); font-size: 0.9em;"><span id="totalRating">[[TOTAL_R]]</span> Rating</p>
+          </div>
+          <div class="ret r2" id="ratingsData"></div>
+        </div>
+        <b style="color: red;">❌ Hurry up only 2 stock left! ❌</b>
+      </div>
+    </div>
+    <style>
+      .reviewBotPan { width: 500px; margin: 50px 0; }
+      .agePan { width: 100%; text-align: center; max-width: 500px; }
+      .age { margin-bottom: 20px; }
+      input[type="range"] { width: 100%; }
+      ::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 20px; height: 20px; border-radius: 50%; background: var(--onSecondaryContainer); cursor: pointer; }
+      .slider { -webkit-appearance: none; width: 100%; height: 80px; border-radius: 80px; background: var(--secondaryContainer); outline: none; border: 2px solid #949494; padding: 0 15px; }
+      .slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 50px; height: 50px; border-radius: 50%; background: var(--stdbg); cursor: pointer; }
+      .slider::-moz-range-thumb { width: 25px; height: 25px; border-radius: 50%; background: var(--stdbg); cursor: pointer; }
+      .suggestPan .suggestion { background: #f0f0f0; padding: 10px; border-radius: 5px; margin: 5px; cursor: pointer; border: 2px solid #ccc; background-color: var(--secondaryContainer); }
+      .handpointerslider { width: 70px; position: absolute; left: calc(49% - 10px); top: 53%; animation: handpointer 2s infinite; pointer-events: none; transition: all .5s; }
+      .remove { opacity: 0; }
+      @keyframes handpointer { 0% { transform: translateX(-50px) rotate(45deg) } 50% { transform: translateX(47px) rotate(45deg) } 100% { transform: translateX(-50px) rotate(45deg) } }
+    </style>
+    <div class="fr fr2 flex c" style="align-self: baseline;">
+      <h2 style="color: var(--stdbg); font-weight: bold; font-size: 2.5em;" id="revieHeading">Select your age.</h2>
+      <div class="reviewBotPan flex c">
+        <div class="agePan">
+          <div class="age" align="center" style="margin: 20px 0;">
+            <p id="age" style="font-size: 4em; font-weight: bold;">53</p>
+            <p style="color: rgba(0, 0, 0, 0.667); font-size: 1em;">Years</p>
+          </div>
+          <div class="slidecontainer">
+            <input type="range" min="12" max="89" value="53" class="slider" id="myRange" oninput="updateAge(this.value)" onchange="ageNext(this.value)">
+            <img src="files/img/handpointer.webp" alt="hand pointer accessibility help" class="handpointerslider">
+          </div>
+          <div class="lineMargin" m="20px" style="margin: 20px; height: 0px; width: 0px; background: 0px center;"></div>
+          <div class="suggestPan flex">
+            <div class="suggestion" onclick="ageNext(35)">30-40 <span style="color: rgba(0, 0, 0, 0.8); font-size: 0.8em;">Years</span></div>
+            <div class="suggestion" onclick="ageNext(45)">40-50 <span style="color: rgba(0, 0, 0, 0.8); font-size: 0.8em;">Years</span></div>
+            <div class="suggestion" onclick="ageNext(55)">50-60 <span style="color: rgba(0, 0, 0, 0.8); font-size: 0.8em;">Years</span></div>
+            <div class="suggestion" onclick="ageNext(65)">60-70 <span style="color: rgba(0, 0, 0, 0.8); font-size: 0.8em;">Years</span></div>
+            <div class="suggestion" onclick="ageNext(75)">70-80 <span style="color: rgba(0, 0, 0, 0.8); font-size: 0.8em;">Years</span></div>
+            <div class="suggestion" onclick="ageNext(85)">80-90 <span style="color: rgba(0, 0, 0, 0.8); font-size: 0.8em;">Years</span></div>
+          </div>
+          <div class="lineMargin" m="40px" style="margin: 40px; height: 0px; width: 0px; background: 0px center;"></div>
+          <button onclick="ageNext(op('#myRange').value)" style="padding: 20px 40px; border-radius: 99px; background:var(--stdbg); color: #fff; border: none; font-size: 1.3em; font-weight: bold; cursor: pointer;">See Reviews</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    resetFormat();
+    showRating();
+  </script>
+
+  <style>
+    section.bgBox { background: url(files/img/greenbg.webp); background-size: cover; background-position: center; padding: 100px; overflow: hidden; }
+    .boxUi { padding: 50px; border-radius: 30px; background: #fff; border-radius: 999px; corner-shape: squircle; max-width: 1300px; }
+    section.content .boxUi .fr.fr1 p {font-size: 1.2em;}
+    section.content .boxUi .fr.fr1 { width: 60%; }
+    .boxUi .fr2 { max-width: 400px; }
+    .boxUi:hover .fr2 img { transform: scale(2) rotate(20deg); }
+    .boxUi .fr2 img { transition: all .75s cubic-bezier(0.48, 0.66, 0, 1.37); max-width: 300px; }
+  </style>
+  <section class="flex content bgBox">
+    <div class="boxUi flex content">
+      <div class="fr fr1">
+        <p>[[CREATE_SUB]]</p>
+        <h1>[[CREATE_TITLE]]</h1>
+        <p>[[CREATE_TEXT]]</p>
+      </div>
+      <div class="fr fr2">
+        <img src="files/img/product2.png" alt="[[PNAME]]">
+      </div>
+    </div>
+  </section>
+
+  <section class="patti">
+    <strong ed="">[[REASON_HEAD]]</strong>
+  </section>
+  <section class="content">
+    <div class="flex cardCont">
+      <style>
+        .cardCont { flex-flow: row wrap; align-items: flex-start; }
+        .card { min-width: 300px; max-width: 300px; text-align: center; padding: 30px; }
+        .card h5 { font-size: 1.8em; }
+        .card img { width: 100%; }
+      </style>
+      <div class="card">
+        <div class="card-wrap">
+          <div class="image-wrap"><img src="files/img/untitled-200-120-px-2-500x300.png" alt="made in usa" class=""></div>
+          <div class="content-wrap"><h5 class=""><strong>[[C1_T]]</strong></h5><p class="" ed="">[[C1_P]]</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-wrap">
+          <div class="image-wrap"><img src="files/img/untitled-200-120-px-1-500x300.png" alt="gmp certified" class=""></div>
+          <div class="content-wrap"><h5 class=""><strong>[[C2_T]]</strong></h5><p class="">[[C2_P]]</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-wrap">
+          <div class="image-wrap"><img src="files/img/untitled-200-120-px-500x300.png" alt="fda approved" class=""></div>
+          <div class="content-wrap"><h5 class=""><strong>[[C3_T]]</strong></h5><p class="" ed="">[[C3_P]]</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-wrap">
+          <div class="image-wrap"><img src="files/img/untitled-200-120-px-3-500x300.png" alt="natural product" class=""></div>
+          <div class="content-wrap"><h5 class=""><strong>[[C4_T]]</strong></h5><p class="" ed="">[[C4_P]]</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="patti" id="Product">
+    <strong ed="">[[WHAT_HEAD]]</strong>
+  </section>
+  <section class="flex content">
+    <div class="fr fr1 flex">
+      <a href="order.html">
+        <img src="files/img/product2.png" alt="[[PNAME]] official discount" title="[[PNAME]] official discount"
+          style="max-width: 500px; width: 100%;">
+      </a>
+    </div>
+    <div class="fr fr2">
+      <p id="edWhatIsProd" ed="">[[WHAT_TEXT]]</p>
+      <div class="btn flex w100p" style="margin: 20px; padding-right: 50px;">
+        <a href="order.html">
+          <button class="orderNow flex">
+            SHOP NOW<img src="files/img/cart.svg" alt="cart icon" width="30px">
+          </button>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="patti" id="Pricing">
+    <strong ed="">[[PRICE_HEAD]]</strong>
+    <p ed="">[[PRICE_SUB1]]</p>
+  </section>
+  <section class="flex" id="order">
+    <style>
+      .patti#Pricing { padding-bottom: 110px; }
+      #order { flex-flow: row wrap; align-items: flex-start; justify-content: center; }
+      #order img { margin: 10px 20px; top: -105px; border-radius: 13px; border: 5px solid var(--stdbg); box-shadow: 0 10px 30px #0005; transition: all .25s; }
+      #order img:hover { box-shadow: 0 10px 50px #0009; transform: scale(1.1); }
+    </style>
+    <a href="order.html"><img src="files/img/bottle1.png" alt="[[PNAME]] 2 bottle discount" title="[[PNAME]] 2 bottle discount"></a>
+    <a href="order.html"><img src="files/img/bottle2.png" alt="[[PNAME]] 6 bottle discount" title="[[PNAME]] 6 bottle discount"></a>
+    <a href="order.html"><img src="files/img/bottle3.png" alt="[[PNAME]] 4 bottle discount" title="[[PNAME]] 4 bottle discount"></a>
+  </section>
+
+  <section class="patti" id="HowItWorks">
+    <strong ed="">[[HOW_HEAD]]</strong>
+  </section>
+  <section class="content">
+    <p id="edHowWork">[[HOW_TEXT]]</p>
+  </section>
+
+  <style>
+    #moneyBackSection{ background-color: #eff7ff; padding: 100px 0; }
+    #moneyBackBox{ margin-top: 110px; background: #222; border: 5px solid #fff; width: 80%; padding: 90px 60px 30px; }
+    #moneyBackBox .moneyBackImg{ position: absolute; width: 250px; aspect-ratio: 1/1; top:-130px; }
+    #moneyBackBox p{ color: #fff; text-align: center; margin: 40px 0 ; }
+  </style>
+  <section class="flex content" id="moneyBackSection">
+    <div class="boxUi flex c" id="moneyBackBox">
+      <img class="moneyBackImg" src="files/img/moneyback.webp" alt="[[PNAME]] money-back guarantee" title="[[PNAME]] money-back guarantee">
+      <div class="w100p">
+        <p id="edmnbckpara">[[MONEY_BACK]]</p>
+        <div class="btn flex w100p" style="margin: 20px; padding-right: 50px;">
+          <a href="order.html">
+            <button class="orderNow flex">
+              GET YOUR BOTTLE TODAY<img src="files/img/cart.svg" alt="cart icon" width="30px">
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="patti" id="benefits">
+    <strong id="edpatti1" ed="">[[BENEFITS_HEAD]]</strong>
+  </section>
+  <section class="content flex">
+    <p ed="">[[BENEFITS_TEXT]]</p>
+  </section>
+
+  <section class="patti" id="Pricing">
+    <strong ed="">[[PRICE_HEAD]]</strong>
+    <p ed="">[[PRICE_SUB2]]</p>
+  </section>
+  <section class="flex" id="order">
+    <style>
+      #order { flex-flow: row wrap; align-items: flex-start; justify-content: center; }
+      #order img { margin: 10px 20px; }
+    </style>
+    <a href="order.html"><img src="files/img/bottle1.png" alt="[[PNAME]] 2 bottle discount" title="[[PNAME]] 2 bottle discount"></a>
+    <a href="order.html"><img src="files/img/bottle2.png" alt="[[PNAME]] 6 bottle discount" title="[[PNAME]] 6 bottle discount"></a>
+    <a href="order.html"><img src="files/img/bottle3.png" alt="[[PNAME]] 4 bottle discount" title="[[PNAME]] 4 bottle discount"></a>
+  </section>
+
+  <section class="patti">
+    <strong ed="">[[FAQ_HEAD]]</strong>
+  </section>
+
+  <section id="faqs" class="flex c">
+    <style>
+      .faqCard { max-width: 80%; background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); overflow: hidden; transition: all 0.3s ease; margin-bottom: 20px; }
+      .faqCard:hover { box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15); }
+      .faqCard.expanded { box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); }
+      @media screen and (max-width: 800px) { .faqCard { max-width: 100%; width: 100%; } }
+      .card-header { padding: 20px; border-bottom: 2px solid transparent; transition: all 0.3s ease; }
+      .faqCard.expanded .card-header { border-bottom-color: var(--stdbg); background: rgba(0, 120, 22, 0.05); }
+      .queBox { margin: 0; font-size: 2em; color: #000; justify-content: flex-start; cursor: pointer; text-decoration: none !important; transition: all 0.3s ease; }
+      .queBox:hover { color: var(--stdbg); }
+      .queBox ion-icon { color: var(--stdbg); margin-right: 15px; font-size: 1.5em; transition: transform 0.3s ease; flex-shrink: 0; }
+      .faqCard.expanded .queBox ion-icon { transform: rotate(90deg); }
+      .ans { font-size: 1em; max-height: 0; overflow: hidden; opacity: 0; transition: all 0.4s ease; padding: 0 20px; }
+      .faqCard.expanded .ans { max-height: 500px; opacity: 1; padding: 0 20px 20px 20px; }
+      .panel-body { margin: 0; }
+      .answerpara { line-height: 2em; font-size: 1.3em; color: #333; }
+    </style>
+[[FAQ_HTML]]
+  </section>
+
+<section class="patti">
+    <strong ed="">[[ORDER_HEAD]]</strong>
+  </section>
+
+  <section class="flex content">
+    <div class="cr cr1 flex">
+      <a href="order.html">
+        <img src="files/img/product1.png" alt="[[PNAME]] discounted bottle" title="[[PNAME]] discounted bottle"
+          style="max-width: 500px; width: 100%;">
+      </a>
+    </div>
+
+    <div class="cr cr2 flex c">
+      <p style="font-size: 2em;"><strike ed="">[[REG_PRICE]]</strike></p>
+      <h2 ed="" style="font-size: 3em;">[[TOD_PRICE]]</h2>
+      <a style="margin: 40px; font-size: 2em;" href="order.html">
+        <button class="orderNow flex" ed="">[[ORDER_BTN]]<img src="files/img/cart.svg" alt="cart icon" width="30px"></button>
+      </a>
+    </div>
+  </section>
+
+  <section class="patti">
+    <style>
+      ul.ulx { text-align: left; margin: auto; padding: auto; }
+      ul.ulx li { font-size: .5em; margin: 0 40px; }
+      ul.ulx li a { color: #fff; }
+    </style>
+    <ul type="disc" class="ulx">
+      <li><a ed="" href="#Product">What is [[PNAME]]?</a></li>
+      <li><a ed="" href="#HowItWorks">How Does [[PNAME]] Work?</a></li>
+      <li><a ed="" href="#benefits">[[PNAME]] Benefits</a></li>
+      <li><a href="Privacy.html">Privacy Policy</a></li>
+      <li><a href="Terms.html">Terms &amp; Conditions</a></li>
+      <li><a href="Disclaimer.html">Disclaimer</a></li>
+    </ul>
+  </section>
+
+  <section class="patti last" style="background: #222;">
+    <style>
+      section.last {}
+      section.last p { color: #fff; font-size: .3em; font-weight: 400; margin: 30px 0; }
+    </style>
+    <p ed="">[[FOOT1]]</p>
+    <p ed="">[[FOOT2]]</p>
+    <p ed="">[[FOOT3]]</p>
+    <p ed="">[[FOOT4]]</p>
+    <p ed="">[[FOOT5]]</p>
+  </section>
+
+  <script>
+    resetFormat();
+  </script>
+  <script src="js/faq.js"></script>
+</body>
+</html>
+</textarea>
+
+
+<script>
+    const defaultFaqs = [
+        {q: "Is Puravive right for me?", a: "Puravive is a revolutionary product that targets deep stubborn fat stores that seem impossible to remove through dieting and exercising alone. This product has been specifically designed to dissolve fat in even the worst cases, which has changed the lives of over 234,000 women and men from a wide range of ages. The effectiveness of Puravive is so high that the company offers an ironclad two-month money-back guarantee to customers who don't see results. This guarantee reflects the company's confidence in the power of Puravive and assures customers that they can try it out without any risk. If you are struggling with stubborn fat, Puravive could be the solution you've been looking for!\n\n"},
+        {q: "Is Puravive safe?", a: "Puravive is a premium quality all-natural formula made from the finest ingredients sourced from both domestic and foreign markets. The product is manufactured in an FDA registered and GMP certified facility using advanced precision-engineered machinery to ensure the highest quality standards. The formula is 100% plant-based, soy-free, dairy-free, vegetarian, and non-GMO. Each ingredient undergoes thorough third-party inspections and quality control to ensure its purity and potency. Puravive is known for its effectiveness in providing optimal health benefits without any reported side effects. With Puravive, you can expect to see significant improvements in your overall health and well-being."},
+        {q: "What if Puravive doesn’t work for me?", a: "Puravive is a dietary supplement that promises to help you dissolve belly fat and achieve your desired body shape. While the manufacturers are confident about the effectiveness of this product, they also acknowledge that no supplement can have a 100% success rate. Therefore, they offer a personal 60-day money-back guarantee to every customer who purchases Puravive. This means that if you are not satisfied with the results, you can return the unused portion of the product and get a full refund without any questions asked. This guarantee ensures that you can try Puravive without any risk and make an informed decision about its suitability for your health goals."},
+        {q: "How Many Bottles Should I Order?", a: "If you're over 35 years old, or carry excess weight, we recommend you take Puravive for at least three to six months so it has enough time to cleanse your entire body and have you reach your desired weight and lock it in for years into the future. If you choose to take advantage of the six bottle ultimate discount package, it comes with free shipping. Remember stock is running out fast. More reason to pick up three or six bottle packages before the price goes up or we sell out completely."},
+        {q: "How quickly will Puravive arrive?", a: "We ship out orders the same day they are received. If you're in the US you can expect the package in 7 to 10 business days. If you're outside the US it'll be longer depending on your local carriers."},
+        {q: "What is the best way to take Puravive?", a: "Take Puravive with a big glass of water every day. Its bespoke proprietary complexes are a blend of natural ingredients that will get to work detoxifying and optimizing your liver so that you can start dissolving fat around the clock, even when sleeping."}
+    ];
+
+    const faqContainer = document.getElementById('faqContainer');
+    function addFAQ(q, a) {
+        const div = document.createElement('div');
+        div.className = 'faq-item';
+        div.innerHTML = `
+            <label>Question:</label>
+            <input type="text" class="faq-q" value="${q.replace(/"/g, '&quot;')}">
+            <label>Answer:</label>
+            <textarea class="faq-a">${a}</textarea>
+        `;
+        faqContainer.appendChild(div);
+    }
+    defaultFaqs.forEach(faq => addFAQ(faq.q, faq.a));
+
+    function formatText(text) {
+        return text.replace(/\n/g, '<br>\n');
+    }
+
+    function generateFile() {
+        // Collect FAQs
+        let faqSchemaArr = [];
+        let faqHtmlArr = [];
+        document.querySelectorAll('.faq-item').forEach(item => {
+            const q = item.querySelector('.faq-q').value.trim();
+            const a = item.querySelector('.faq-a').value.trim();
+            if (q && a) {
+                faqSchemaArr.push({ "@type": "Question", "name": q, "acceptedAnswer": { "@type": "Answer", "text": a } });
+                faqHtmlArr.push(`
+    <div class="faqCard">
+      <div class="card-header" onclick="toggleFAQ(this)">
+        <div class="queBox flex">
+          <h6 class="question"><strong ed="">${q}</strong></h6>
+        </div>
+      </div>
+      <div class="ans">
+        <div class="panel-body">
+          <p class="answerpara" ed="">${formatText(a)}</p>
+        </div>
+      </div>
+    </div>`);
+            }
+        });
+
+        const pName = document.getElementById('pName').value;
+        const s5 = parseInt(document.getElementById('s5').value)||0;
+        const s4 = parseInt(document.getElementById('s4').value)||0;
+        const s3 = parseInt(document.getElementById('s3').value)||0;
+        const s2 = parseInt(document.getElementById('s2').value)||0;
+        const s1 = parseInt(document.getElementById('s1').value)||0;
+        const totalR = s5+s4+s3+s2+s1;
+        const ovrR = totalR > 0 ? ((s5*5 + s4*4 + s3*3 + s2*2 + s1*1)/totalR).toFixed(1) : 5.0;
+
+        const prodSchemaStr = JSON.stringify({
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            "name": pName,
+            "image": document.getElementById('canonicalUrl').value + "files/img/product1.png",
+            "description": document.getElementById('metaDesc').value,
+            "brand": { "@type": "Brand", "name": pName },
+            "offers": {
+                "@type": "Offer",
+                "url": document.getElementById('canonicalUrl').value,
+                "priceCurrency": "USD",
+                "price": "39.00",
+                "availability": "https://schema.org/InStock",
+                "itemCondition": "https://schema.org/NewCondition",
+                "seller": { "@type": "Organization", "name": pName }
+            },
+            "aggregateRating": { "@type": "AggregateRating", "ratingValue": ovrR, "reviewCount": totalR }
+        }, null, 2);
+
+        const dict = {
+            '[[PNAME]]': pName,
+            '[[DISCOUNT]]': document.getElementById('discount').value,
+            '[[META_TITLE]]': document.getElementById('metaTitle').value,
+            '[[CANONICAL]]': document.getElementById('canonicalUrl').value,
+            '[[META_KEYS]]': document.getElementById('metaKeywords').value,
+            '[[META_DESC]]': document.getElementById('metaDesc').value,
+            '[[C_PRI]]': document.getElementById('cPrimary').value,
+            '[[C_SEC_BG]]': document.getElementById('cSecBg').value,
+            '[[C_SEC_TXT]]': document.getElementById('cSecTxt').value,
+            
+            '[[HERO_HEAD]]': document.getElementById('heroHead').value,
+            '[[HERO_TEXT]]': formatText(document.getElementById('heroText').value),
+            '[[HERO_UNDER]]': document.getElementById('heroUnderline').value,
+            '[[HERO_BTN]]': document.getElementById('heroBtn').value,
+            
+            '[[REV_HEAD]]': document.getElementById('revHead').value,
+            '[[TOTAL_R]]': totalR, '[[OVR_R]]': ovrR,
+            '[[S5]]': s5, '[[S4]]': s4, '[[S3]]': s3, '[[S2]]': s2, '[[S1]]': s1,
+            '[[M1]]': document.getElementById('mRev1').value, '[[M2]]': document.getElementById('mRev2').value, '[[M3]]': document.getElementById('mRev3').value,
+            '[[F1]]': document.getElementById('fRev1').value, '[[F2]]': document.getElementById('fRev2').value, '[[F3]]': document.getElementById('fRev3').value,
+            
+            '[[CREATE_SUB]]': document.getElementById('createSub').value,
+            '[[CREATE_TITLE]]': document.getElementById('createTitle').value,
+            '[[CREATE_TEXT]]': formatText(document.getElementById('createText').value),
+            
+            '[[REASON_HEAD]]': document.getElementById('reasonHead').value,
+            '[[C1_T]]': document.getElementById('c1Title').value, '[[C1_P]]': formatText(document.getElementById('c1Text').value),
+            '[[C2_T]]': document.getElementById('c2Title').value, '[[C2_P]]': formatText(document.getElementById('c2Text').value),
+            '[[C3_T]]': document.getElementById('c3Title').value, '[[C3_P]]': formatText(document.getElementById('c3Text').value),
+            '[[C4_T]]': document.getElementById('c4Title').value, '[[C4_P]]': formatText(document.getElementById('c4Text').value),
+
+            '[[WHAT_HEAD]]': document.getElementById('whatHead').value,
+            '[[WHAT_TEXT]]': formatText(document.getElementById('whatText').value),
+            
+            '[[HOW_HEAD]]': document.getElementById('howHead').value,
+            '[[HOW_TEXT]]': formatText(document.getElementById('howText').value),
+            
+            '[[MONEY_BACK]]': formatText(document.getElementById('moneyText').value),
+            
+            '[[BENEFITS_HEAD]]': document.getElementById('benHead').value,
+            '[[BENEFITS_TEXT]]': formatText(document.getElementById('benText').value),
+
+            '[[PRICE_HEAD]]': document.getElementById('priceHead').value,
+            '[[PRICE_SUB1]]': document.getElementById('priceSubTop').value,
+            '[[PRICE_SUB2]]': document.getElementById('priceSubBot').value,
+
+            '[[FAQ_HEAD]]': document.getElementById('faqTitle').value,
+            
+            '[[ORDER_HEAD]]': document.getElementById('botHead').value,
+            '[[REG_PRICE]]': document.getElementById('regPrice').value,
+            '[[TOD_PRICE]]': document.getElementById('todayPrice').value,
+            '[[ORDER_BTN]]': document.getElementById('botBtn').value,
+
+            '[[FOOT1]]': formatText(document.getElementById('foot1').value),
+            '[[FOOT2]]': formatText(document.getElementById('foot2').value),
+            '[[FOOT3]]': formatText(document.getElementById('foot3').value),
+            '[[FOOT4]]': formatText(document.getElementById('foot4').value),
+            '[[FOOT5]]': formatText(document.getElementById('foot5').value),
+
+            '[[PROD_SCHEMA]]': prodSchemaStr,
+            '[[FAQ_SCHEMA]]': JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqSchemaArr }, null, 2),
+            '[[FAQ_HTML]]': faqHtmlArr.join('\n')
+        };
+
+        let rawHtml = document.getElementById('html-template').value;
+        
+        for (const [key, val] of Object.entries(dict)) {
+            const regex = new RegExp(key.replace(/\[/g, '\\[').replace(/\]/g, '\\]'), 'g');
+            rawHtml = rawHtml.replace(regex, val);
+        }
+
+        const blob = new Blob([rawHtml], { type: 'text/html' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'index.html';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    }
+</script>
+</body>
+</html>
