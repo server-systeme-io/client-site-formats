@@ -16,7 +16,7 @@ make the menu bar with option of benefits, ingredients, faqs, pricing, how it wo
 section should be present in the page (Intro, How Does $productName work, quick overview, pricing, what does $productName does for you, ingredients, reviews, why choose #productName, bonuses (if any), money back gurantee) and you can also add or remove as per your wish 
 add at the bottom  - Footer fda complaince (50-100 words) & don't add the copywright text.
 alt text of the image make it meaningfull and use the product name in the alttext
-add the schema of faqs and reviews.
+add the schema of faqs, reviews and product.
 
 imagesLink = [$imgAry] (kept in the img folder)
 themeColor={
