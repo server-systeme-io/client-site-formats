@@ -1,19 +1,19 @@
 
-my command = make a proper page with classic look. use color IMAGES AND ANIMATION transition and hover effect
+my command = make a proper page with classic look use proper color combination. use color IMAGES AND ANIMATION transition and hover effect
 make the clickbank product = "$productName" page for ranking on bing.
 so make index.html, privacy-policy.html, disclaimer.html and terms.html
 
 domain to be hosted = $domain
-reference content = $referenceContent
+exact content (not to be changed even a word) = $exactContent (however you can add some content of missing areas)
 in the page linking use $domain/pageName.html or $domain/#pricing
 in the affiliate link just use https://$domain/order
 
 in the page.
 title.maxLenght=60 (in the title of the page dont use $domain)
-discription.maxLenght=160
+description.maxLenght=160
+add the meta keywords
 make the menu bar with option of benefits, ingredients, faqs, pricing, how it works, what is $productName (don't use everything specified but choose random and suffle)
 section should be present in the page (Intro, How Does $productName work, quick overview, pricing, what does $productName does for you, ingredients, reviews, why choose #productName, bonuses (if any), money back gurantee) and you can also add or remove as per your wish 
-make the Content in simple language and length SEO Type for USA. (mention USA naturally in the text not more than 2 times).
 add at the bottom  - Footer fda complaince (50-100 words) & don't add the copywright text.
 alt text of the image make it meaningfull and use the product name in the alttext
 add the schema of faqs and reviews.
@@ -29,5 +29,5 @@ themeColor={
 $domain = 
 $productName = 
 $imgAry = []
-$referenceContent = ``
+$exactContent = ``
 $pricingDataInOrder= ``
