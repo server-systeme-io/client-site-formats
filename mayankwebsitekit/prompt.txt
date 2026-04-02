@@ -16,18 +16,261 @@ make the menu bar with option of benefits, ingredients, faqs, pricing, how it wo
 section should be present in the page (Intro, How Does $productName work, quick overview, pricing, what does $productName does for you, ingredients, reviews, why choose #productName, bonuses (if any), money back gurantee) and you can also add or remove as per your wish 
 add at the bottom  - Footer fda complaince (50-100 words) & don't add the copywright text.
 alt text of the image make it meaningfull and use the product name in the alttext
-add the schema of faqs, reviews and product.
+add the schema of faqs and reviews.
 
 imagesLink = [$imgAry] (kept in the img folder)
 themeColor={
-    theme: dark,
-    bottleColor=black,
-    buttonColor=green,
-    stripColor=red,
+    theme: light,
+    bottleColor=pink,
+    buttonColor=yellow,
+    stripColor=white,
 }
 
-$domain = 
-$productName = 
-$imgAry = []
-$exactContent = ``
-$pricingDataInOrder= ``
+$domain = jellyburn-us.com
+$productName = JellyBurn
+$imgAry = [JellyBurn-Sarah-M-eview.webp
+JellyBurn-James-L-review.webp
+JellyBurn-Oliver-K-review.webp
+what-is-JellyBurn.webp
+JellyBurn-intro.webp
+JellyBurn-2bottles.webp
+JellyBurn-3bottle.webp
+JellyBurn-6bottle.webp
+]
+$exactContent and don't change any content use same content to the page that i have given you = `Title: Jelly Burn: Weight Loss Support Formula USA
+
+description : Jelly Burn is a natural weight support formula that helps boost metabolism, control cravings, and support natural fat burning for steady results.
+
+Jelly Burn is a unique, natural weight management supplement designed to support healthy fat loss and daily energy levels. Created for people in the USA looking for a simple and effective solution, Jelly Burn focuses on improving metabolism and controlling cravings without harsh methods. Its plant-based formula works with your body to help burn stubborn fat and maintain long-term wellness.
+
+🔥 Supports natural fat burning and metabolism
+⚡ Helps improve daily energy and focus
+🍽️ Controls hunger and reduces cravings
+🌿 Made with natural, plant-based ingredients
+
+What is Jelly Burn?
+
+Jelly Burn is a modern weight support supplement designed for people in the USA who want a simple and practical way to manage their body weight. Unlike traditional pills or powders, Jelly Burn comes in an easy-to-use liquid drop form, making it more convenient for daily use. This unique format allows users to include it in their routine without any hassle.
+
+The main purpose of Jelly Burn is to support the body’s natural fat-burning process. It works by helping improve metabolism, which plays an important role in how the body uses energy and stores fat. When metabolism works better, the body can burn calories more efficiently, which may support gradual and healthy weight management.
+
+Another key focus of Jelly Burn is appetite control. Many people struggle with cravings and overeating, especially in a busy lifestyle. Jelly Burn is designed to help reduce these cravings so users can maintain better control over their eating habits. This makes it easier to follow a balanced lifestyle without feeling restricted.
+
+In addition, Jelly Burn is made with a blend of natural ingredients that are commonly known for supporting energy levels and overall wellness. Instead of offering quick or extreme results, it focuses on providing steady and manageable support for long-term use.
+
+Today, Jelly Burn is becoming popular in the USA market because of its simple approach, easy usage, and user-friendly concept. It is mainly used by individuals who are looking for a natural and convenient way to support their weight goals without complicated routines.
+
+How Does Jelly Burn Work?
+
+Jelly Burn works by supporting the body’s natural systems that are involved in fat burning, energy use, and appetite control. Instead of forcing quick results, Jelly Burn focuses on helping the body function better so weight management becomes easier over time.
+
+First, Jelly Burn helps improve metabolism. Metabolism is the process your body uses to convert food into energy. When metabolism is slow, the body tends to store more fat. Jelly Burn is designed to support a more active metabolic rate, which may help the body burn calories more efficiently throughout the day.
+
+Second, Jelly Burn works on appetite control. Many people in the USA struggle with frequent cravings and overeating due to busy lifestyles and unhealthy food choices. Jelly Burn helps reduce these cravings by supporting balanced hunger signals. This can make it easier to eat less without feeling uncomfortable or restricted.
+
+Another important way Jelly Burn works is by supporting energy levels. When your body has better energy, you naturally stay more active, which can help with calorie burning. Instead of sudden energy spikes, Jelly Burn aims to provide steady support so users can stay consistent in their daily routine.
+
+The liquid drop formula of Jelly Burn also plays a role in how it works. Since it is not in pill form, it is easy to use and may be absorbed quickly by the body. This makes it a convenient option for people who prefer simple solutions over complicated supplement routines.
+
+Overall, Jelly Burn works by combining metabolism support, appetite control, and steady energy balance. It is not designed as a quick-fix solution but as a supportive tool for people who want gradual and manageable weight support in their daily life.
+
+
+Key Ingredients of Jelly Burn
+
+Jelly Burn is made with natural ingredients that help support weight management and overall health. Each ingredient plays an important role in helping the body burn fat, control cravings, and stay active throughout the day.
+
+1. Green Tea Leaf Extract
+
+Green tea is rich in antioxidants like catechins. It helps boost metabolism and supports fat burning in a natural way. It may also help the body burn more calories, even while resting. In addition, green tea supports overall wellness and helps protect the body from damage caused by free radicals.
+
+2. Guarana Seed Extract
+
+Guarana is a natural source of caffeine that helps increase energy levels. It supports better focus and alertness, which can help you stay active during the day. It may also improve calorie burning and support physical performance without feeling too heavy or tired.
+
+3. African Mango Seed Extract
+
+This ingredient is known for helping control appetite and reducing unnecessary snacking. It may support healthy weight management by improving how the body stores fat. African mango is also linked with better digestion and may help maintain healthy cholesterol levels.
+
+4. Gymnema Leaf Extract
+
+Gymnema is often used to reduce sugar cravings, making it easier to avoid unhealthy foods. It supports balanced blood sugar levels, which is important for weight control. It may also help reduce the desire for sweets and support long-term healthy eating habits.
+
+5. Chromium (Chromium Picolinate)
+
+Chromium is an essential mineral that helps support insulin function. It plays a key role in managing blood sugar levels and may help reduce hunger and cravings. It also supports better metabolism of carbohydrates, fats, and proteins in the body.
+
+6. L-Carnitine
+
+L-Carnitine helps transport fatty acids into cells where they are used for energy. This process supports fat burning and helps improve energy levels. It may also help reduce fatigue and support better physical performance during daily activities.
+
+Benefits of Jelly Burn
+
+Jelly Burn offers a range of benefits for people who want a simple and natural way to support their weight goals. It is designed to work with your body, not against it, making it a practical choice for daily use.
+
+1. Supports Natural Fat Burning
+
+One of the main benefits of Jelly Burn is its ability to support the body’s natural fat-burning process. It helps improve how your body uses stored fat for energy, which may lead to gradual and healthy weight management over time.
+
+2. Helps Boost Metabolism
+
+A slow metabolism can make weight loss difficult. Jelly Burn helps support a more active metabolism so your body can burn calories more efficiently throughout the day, even when you are at rest.
+
+3. Reduces Cravings and Overeating
+
+Many people struggle with frequent hunger and cravings. Jelly Burn helps control appetite by supporting balanced hunger signals, making it easier to avoid overeating and unhealthy snacking.
+
+4. Improves Energy Levels
+
+Low energy can affect your daily routine and physical activity. Jelly Burn helps provide steady energy support, allowing you to stay active, focused, and productive without sudden crashes.
+
+5. Easy to Use and Convenient
+
+Unlike capsules or powders, Jelly Burn comes in a liquid form that is simple to take. It fits easily into any lifestyle, especially for people who prefer quick and hassle-free solutions.
+
+6. Supports Healthy Lifestyle Goals
+
+Jelly Burn is not a quick-fix solution, but it works best as part of a balanced lifestyle. It supports better eating habits, improved activity levels, and long-term weight management.
+
+7. Made with Natural Ingredients
+
+Another benefit of Jelly Burn is its natural formula. The ingredients are selected to support overall health while helping with weight control, making it suitable for regular use.
+
+Pros and Cons of Jelly Burn
+
+Pros
+
+Easy to Use: Jelly Burn comes in a liquid form, which makes it simple to take daily without mixing or swallowing pills.
+
+Supports Fat Burning: It helps the body use stored fat for energy, which may support gradual weight loss.
+
+Helps Control Cravings: Jelly Burn may reduce hunger and cravings, making it easier to avoid overeating.
+
+Boosts Energy Levels: It supports better energy throughout the day, helping you stay active and focused.
+
+Natural Ingredients: The formula includes natural ingredients that support overall health and wellness.
+
+Fits Any Lifestyle: It is convenient for busy people who want a simple addition to their daily routine.
+
+Cons
+
+Results May Be Slow: Some users may not see quick results, as it works gradually over time.
+
+Not a Magic Solution: It works best with a healthy diet and active lifestyle, not on its own.
+
+Limited Ingredient Transparency: Exact ingredient amounts may not always be clearly explained.
+
+Possible Mild Side Effects: Some users may experience minor issues like taste discomfort or digestion changes.
+
+How to Use Jelly Burn?
+
+Using Jelly Burn is simple and fits easily into your daily routine. It comes in a liquid drop form, so you don’t need to swallow pills or mix powders.
+Step-by-Step Guide
+Take the Recommended Amount
+ Use the dropper to take the suggested dose mentioned on the product label. Do not take more than recommended.
+Use It Daily
+ For best results, take Jelly Burn every day at the same time. Consistency is important for better results.
+Add to Water or Take Directly
+ You can take it directly under your tongue or mix it with a glass of water, depending on your preference.
+Follow a Healthy Lifestyle
+ For better results, combine Jelly Burn with a balanced diet and regular physical activity.
+Stay Hydrated
+ Drink enough water throughout the day to support your body and improve overall results.
+Is Jelly Burn Safe?
+
+Jelly Burn is generally considered safe for most healthy adults when used as directed. It is made with natural ingredients that are commonly used in wellness products, which makes it a suitable option for people looking for a simple weight support solution.
+
+The formula is designed to be gentle on the body. Most users do not report serious side effects, especially when they follow the recommended dosage. Some people may notice mild changes at the beginning, such as slight digestive discomfort or a different taste, but these usually go away as the body adjusts.
+
+Another positive point is that Jelly Burn does not rely on strong or harsh stimulants. This makes it a better choice for those who are sensitive to high caffeine or intense fat burners.
+
+However, it is always important to be careful with any supplement. If you are pregnant, nursing, taking medication, or have any health condition, it is best to talk to a doctor before using Jelly Burn. This helps avoid any unwanted reactions.
+
+Also, users should always buy Jelly Burn from the official source to make sure they are getting the original and safe product.
+
+Real Customer Reviews
+
+⭐ 1. Sarah M., 38 – Texas, USA
+
+“I started using Jelly Burn about a month ago. At first, I didn’t notice big changes, but after a few weeks, my cravings became less, especially for sweets. I feel more in control of my eating now. The weight loss is slow, but I do feel lighter and more active during the day.”
+
+⭐ 2. James L., 42 – California, USA
+
+“I like how easy Jelly Burn is to use. The liquid drops fit well into my morning routine. I didn’t get fast results, but over time I noticed better energy and small changes in my weight. It works best when I also follow a healthy diet and light exercise.”
+
+⭐ 3. Emily R., 35 – Florida, USA
+
+“I had mixed feelings about Jelly Burn. It helped me reduce snacking and I felt less hungry, which is a plus. But honestly, the results were not as fast as the ads show. I think it’s helpful, but only if you stay consistent and don’t expect miracles.”
+
+Pricing & Packages
+
+Money-Back Guarantee
+
+Jelly Burn comes with a 60-day money-back guarantee, which gives users confidence while trying the product. This means you have enough time to see how it works for your body without feeling any pressure.
+
+If you are not satisfied with your results, you can request a refund within 60 days of your purchase. The process is simple—just contact the customer support team and follow their instructions. In most cases, you can return the bottles (even if they are empty) and get your money back.
+
+This guarantee shows that the company stands behind the quality of Jelly Burn and wants customers to feel safe when making a purchase.
+
+Where to Buy Jelly Burn
+
+If you want to buy Jelly Burn, it is best to purchase it from the official website. This helps you make sure that you are getting the original and safe product, not a fake or low-quality copy. The official site often provides the latest discounts, bundle offers, and free shipping options, which can help you save money. 
+
+It also includes the 60-day money-back guarantee, so you can try Jelly Burn without risk. Avoid buying from unknown sellers or random online stores, as the quality and authenticity may not be guaranteed. For the best results and a safe purchase, always choose the trusted official source.
+
+FAQs
+
+1. What is Jelly Burn used for?
+
+Jelly Burn is used to support weight management. It helps improve metabolism, control cravings, and support fat burning in a natural way.
+
+2. How long does Jelly Burn take to show results?
+
+Results can vary from person to person. Some users may notice small changes in a few weeks, but better results usually come with regular use over time.
+
+3. How do I take Jelly Burn daily?
+
+You can take Jelly Burn using the dropper. It can be taken directly or mixed with water. For best results, use it daily as instructed on the label.
+
+4. Can I use Jelly Burn without diet or exercise?
+
+Yes, you can use it without strict dieting. However, combining Jelly Burn with a healthy diet and light exercise can give better results.
+
+5. Are there any side effects of Jelly Burn?
+
+Most users do not face serious side effects. Some may experience mild issues like taste changes or slight digestion discomfort at the beginning.
+
+6. Is Jelly Burn safe for everyone?
+
+It is generally safe for healthy adults. But if you are pregnant, taking medication, or have a health condition, it is best to consult a doctor before use.
+
+7. Where should I buy Jelly Burn from?
+
+It is recommended to buy Jelly Burn from the official website to ensure you get the original product and access to offers and guarantees.
+
+8. Does Jelly Burn come with a refund policy?
+
+Yes, Jelly Burn usually comes with a 60-day money-back guarantee, so you can try it without risk.
+
+Conclusion
+
+Jelly Burn is a simple and easy-to-use weight support supplement designed for people who want a practical way to manage their weight. It focuses on helping the body improve metabolism, control cravings, and support natural fat burning without making extreme promises.
+
+One of the best things about Jelly Burn is its liquid form, which makes it convenient for daily use. It also uses natural ingredients that aim to support overall health along with weight management. Many users like that it fits easily into their routine without adding extra effort.
+
+However, it is important to understand that Jelly Burn is not a quick-fix solution. Results may take time and can be different for each person. For better results, it should be used with a balanced diet and regular physical activity.
+
+In the end, Jelly Burn can be a helpful option for those looking for steady and natural weight support, especially for people with busy lifestyles. Staying consistent and patient is the key to getting the best results.`
+
+$pricingDataInOrder= `6 bottles pricing per bottle=$49
+Total $294
+3 bottles pricing per bottle=$69
+Total $207
+2 bottles pricing per bottle=$79
+Total $158
+Do 6 bottles pricing in the middle as Most popular and three bottles pricing in first and one bottle pricing in last`
+
+Add A section below the FAQs section: Regular pricing=$79
+today's pricing=$49 
+and add one image of jelly burn so the page looks good
+
+In HTML code add Keywords for the better SEO of the website.
