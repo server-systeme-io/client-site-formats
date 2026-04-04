@@ -1,7 +1,7 @@
 
 my command = make a proper page with classic look use proper color combination. use color IMAGES AND ANIMATION transition and hover effect
 make the clickbank product = "$productName" page for ranking on bing.
-so make index.html, privacy-policy.html, disclaimer.html and terms.html
+so make index.html, privacy-policy.html, disclaimer.html, terms.html, robots.txt and sitemap.xml 
 
 domain to be hosted = $domain
 exact content (not to be changed even a word) = $exactContent (however you can add some content of missing areas)
